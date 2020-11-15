@@ -1,0 +1,14 @@
+server:
+  port: 7777
+
+spring:
+  activemq:
+    broker-url: tcp://192.168.1.115:61616 #指定mq地址
+    user: admin
+    password: admin
+  jms:
+    pub-sub-domain: true #指定连接的目的地是queue还是topic  默认false = queue   true=topic
+    template:
+      delivery-mode: persistent #配置持久化
+#配置服务上的队列名
+myQueueName: boot_acitvemq_queue1
